@@ -137,18 +137,6 @@ export default function Projects() {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-2">
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="flex items-center space-x-1 bg-blue-600 text-white px-3 py-1.5 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-xs font-medium"
-                    >
-                      <Github className="w-3 h-3" />
-                      <span>View Code</span>
-                    </a>
-                  )}
                   <div className="flex items-center space-x-1 border border-gray-300 text-gray-700 px-3 py-1.5 rounded-lg group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-300 transition-colors duration-200 text-xs font-medium">
                     <ExternalLink className="w-3 h-3" />
                     <span>View Details</span>

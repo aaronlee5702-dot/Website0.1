@@ -127,8 +127,8 @@ export default function Hero() {
                     <div className="text-sm text-gray-200 drop-shadow-md">Technologies</div>
                   </div>
                   <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/10 backdrop-blur-sm border border-blue-300/30 rounded-lg p-4">
-                    <div className="text-2xl font-bold text-blue-300 drop-shadow-lg">3</div>
-                    <div className="text-sm text-gray-200 drop-shadow-md">Patents Filed</div>
+                    <div className="text-2xl font-bold text-blue-300 drop-shadow-lg">2</div>
+                    <div className="text-sm text-gray-200 drop-shadow-md">Research Projects</div>
                   </div>
                 </div>
               </div>

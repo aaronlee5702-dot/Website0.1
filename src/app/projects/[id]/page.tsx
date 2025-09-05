@@ -90,6 +90,14 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             </p>
           </div>
 
+          {/* Description */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Description</h2>
+            <div className="prose prose-lg text-gray-700 leading-relaxed">
+              <p>{project.detailedDescription}</p>
+            </div>
+          </div>
+
           {/* Technologies */}
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Technologies Used</h2>
@@ -120,17 +128,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4 pt-6 border-t border-gray-200">
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
-              >
-                <Github className="w-5 h-5" />
-                <span>View Source Code</span>
-              </a>
-            )}
             <Link
               href="/#projects"
               className="inline-flex items-center space-x-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 font-medium"

@@ -53,10 +53,15 @@ export default function Header() {
               <Mail className="w-4 h-4" />
               <span>{personalInfo.email}</span>
             </div>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
+            >
               <Download className="w-4 h-4" />
               <span>Resume</span>
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -96,10 +101,15 @@ export default function Header() {
                   <MapPin className="w-4 h-4" />
                   <span>{personalInfo.location}</span>
                 </div>
-                <button className="w-full mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2">
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2"
+                >
                   <Download className="w-4 h-4" />
                   <span>Download Resume</span>
-                </button>
+                </a>
               </div>
             </div>
           </div>

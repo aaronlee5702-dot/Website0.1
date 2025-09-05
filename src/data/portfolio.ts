@@ -2,6 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  detailedDescription: string;
   technologies: string[];
   category: 'design' | 'analysis' | 'manufacturing' | 'research';
   image: string;
@@ -46,6 +47,7 @@ export const projects: Project[] = [
     id: '1',
     title: '6-axis Robotic Arm',
     description: 'Designed and developed a 6-DOF robotic arm with precision control for manufacturing applications.',
+    detailedDescription: 'This comprehensive project involved the complete design and implementation of a six-axis robotic arm system capable of precise manipulation tasks in manufacturing environments. The project encompassed mechanical design using SolidWorks, where I developed the kinematic structure with optimized joint configurations for maximum workspace coverage. The control system was implemented using Arduino microcontrollers with custom C++ firmware, featuring advanced PID control algorithms for smooth and accurate motion. MATLAB was utilized for trajectory planning, inverse kinematics calculations, and system simulation. The robotic arm features modular end-effector mounting, allowing for various tools and grippers to be attached based on specific manufacturing requirements. The main structure of the arm was 3D printed for cheap and rapid prototyping purposes. The housings for the motors were originally expanding during the actuation process so many new designs were made to reduce overheating.',
     technologies: ['SolidWorks', 'MATLAB', 'Arduino', 'C++', 'PID Control'],
     category: 'design',
     image: '/projects/robotic-arm.jpg',
@@ -61,8 +63,9 @@ export const projects: Project[] = [
   {
     id: '2',
     title: 'Automated Lab System Incubator',
-    description: 'Performed thermal analysis and optimization of shell-and-tube heat exchangers for industrial applications.',
-    technologies: ['ANSYS Fluent', 'Python', 'CFD', 'Heat Transfer Analysis'],
+    description: 'Automated laboratory incubation system for biological cell culture applications.',
+    detailedDescription: 'This research project focused on developing an automated laboratory incubation system for biological cell culture applications, with particular emphasis on maintaining precise environmental conditions for neuron cell growth. The system integrates advanced temperature control, humidity regulation, CO2 concentration monitoring, and automated media exchange capabilities. Python scripting was employed for data acquisition, real-time monitoring, and automated control algorithms. The project involved extensive heat transfer analysis to design efficient heating elements and insulation systems. The final system achieved temperature stability within ±0.1°C and humidity control within ±2% RH, making it suitable for sensitive biological research applications.\n\nKey project achievements include:\n• Created an enclosed system to grow and nurture neuron brain cells by exchanging media and building a microscope to observe them.\n• Converted a 3D printer and repurposed its end effector to control a micropipette to exchange medium and microscope for observation. The end effector will change based on which tool is needed.\n• Created a rocking system to tilt old medium liquid to ensure proper exchange of new medium. Created a microscope with remote control capabilities to zoom in and out for precise observation of the neurons. Created a pipetting system to exchange medium and pipette tips to reduce contamination. This project tested my understanding of precision manufacturing.',
+    technologies: ['Python', 'CFD', 'Heat Transfer Analysis', 'SolidWorks FEA', 'CAD'],
     category: 'research',
     image: '/projects/heat-exchanger.jpg',
     duration: '4 months',
@@ -76,7 +79,8 @@ export const projects: Project[] = [
   {
     id: '3',
     title: 'Additive Manufacturing: Prusa MK3s Construction',
-    description: 'Developed optimized 3D printing parameters for aerospace-grade titanium components.',
+    description: 'Custom Construction and Improvements of Prusa MK3s.',
+    detailedDescription: 'This comprehensive additive manufacturing project involved the complete assembly, calibration, and optimization of a Prusa MK3s 3D printer for high-precision prototyping applications.\n\n• The project began with mechanical assembly from kit components, followed by extensive calibration procedures to achieve optimal print quality.\n\n• I developed custom printing profiles for various materials including PLA, PETG, ABS, and specialty engineering plastics.\n\n• The focus extended to process optimization through systematic parameter studies examining layer height, print speed, infill patterns, and temperature settings.\n\n• Quality control protocols were established including dimensional accuracy testing, surface finish analysis, and mechanical property validation.\n\n• The project also involved developing post-processing techniques for improved part quality and implementing automated bed leveling systems for consistent first-layer adhesion. Also, Enhancing its capabilities by building an enclosure & a smaller nozzle size.\n\n• The final system achieved dimensional tolerances within ±0.05mm for small components and enabled rapid prototyping capabilities for various engineering applications.',
     technologies: ['3D Printing', 'Material Science', 'Quality Control', 'Metallurgy'],
     category: 'manufacturing',
     image: '/projects/3d-printing.jpg',
@@ -92,15 +96,15 @@ export const projects: Project[] = [
     id: '4',
     title: 'Wind Turbine Blade Aerodynamics Generator',
     description: 'Research project on optimizing wind turbine blade design for maximum energy efficiency.',
-    technologies: ['CFD', 'ANSYS', 'Wind Tunnel Testing', 'Data Analysis'],
+    detailedDescription: 'This advanced research project focused on aerodynamic optimization of wind turbine blade designs to maximize energy extraction efficiency while minimizing noise generation and structural loads. The project employed computational fluid dynamics (CFD) analysis using ANSYS Fluent to investigate complex flow phenomena around various blade geometries. Multiple airfoil profiles were analyzed, including NACA series and custom-designed sections optimized for specific wind conditions. The research involved parametric studies of blade twist distribution, chord length variation, and tip design modifications. Wind tunnel testing was conducted on scaled models to validate CFD predictions and gather experimental data for boundary layer behavior and wake characteristics. Data analysis techniques included statistical correlation analysis, sensitivity studies, and multi-objective optimization algorithms. The project resulted in novel blade design concepts that demonstrated significant improvements in energy capture efficiency while contributing to more environmentally friendly wind energy systems. Additionally, we constructed the base of the Windmill tower with two 3D printed parts. Tested and printed with many materials like ASA, ABS, PETG, PLA, etc. Tested ASA filament for windmill blades for low-density qualities, large temperature changes, strength, and stiffness.',
+    technologies: ['CFD', 'ANSYS', 'Wind Tunnel Testing', 'Data Analysis', 'SolidWorks FEA', 'CAD'],
     category: 'analysis',
     image: '/projects/wind-turbine.jpg',
     duration: '12 months',
     highlights: [
       'Increased energy output by 18%',
-      'Reduced noise levels by 12dB',
-      'Validated with wind tunnel experiments',
-      'Patent application filed'
+      'Solidworks FEA practice',
+      'Validated with wind tunnel experiments'
     ]
   }
 ];
@@ -113,10 +117,11 @@ export const experience: Experience[] = [
     duration: '2022 - Present',
     location: 'San Francisco, CA',
     description: [
-      'Lead design and development of automated manufacturing systems',
-      'Manage cross-functional teams of 8+ engineers and technicians',
+      'Experimented with Spot Lamp positionings to ensure an ideal thickness and thickness profile of a silicon wafer.',
+      'Collaborated with ASM to analyze different heating positions & tuning temperature inputs to ensure uniform wafer thickness profiles',
       'Implement lean manufacturing principles to optimize production efficiency',
-      'Collaborate with clients to develop custom engineering solutions'
+      'Analyzed FDC alarms & SPC charts and conducted root cause analysis on recurring failures and tool problems',
+      'Performed preventative maintenance and supported continuous improvement of maintenance procedures'
     ],
     technologies: ['SolidWorks', 'AutoCAD', 'ANSYS', 'Python', 'PLC Programming']
   }
@@ -145,10 +150,10 @@ export const education: Education[] = [
     duration: '2012 - 2016',
     gpa: '3.8/4.0',
     achievements: [
-      'Magna Cum Laude',
-      'Tau Beta Pi Honor Society',
-      'ASME Student Chapter President',
-      'Senior Design Project: First Place'
+      'Neurotech at Berkeley (NT@B)',
+      'Space Enterprise at Berkeley (SEB)',
+      'Jacob\'s Design Innovation',
+      'Research on culturing brain cells'
     ]
   }
 ];
@@ -177,8 +182,8 @@ export const skills: Skill[] = [
       { name: 'Python', logo: '/logos/python.svg', level: 92 },
       { name: 'C++', logo: '/logos/cpp.svg', level: 85 },
       { name: 'MATLAB', logo: '/logos/matlab.svg', level: 90 },
-      { name: 'LabVIEW', logo: '/logos/labview.svg', level: 83 },
-      { name: 'PLC Programming', logo: '/logos/plc.svg', level: 87 },
+      { name: 'Javascript', logo: '/logos/javascript.svg', level: 83 },
+      { name: 'Java', logo: '/logos/java.svg', level: 87 },
       { name: 'Arduino', logo: '/logos/arduino.svg', level: 89 }
     ]
   },
@@ -212,7 +217,7 @@ export const personalInfo = {
   email: 'oisaaronlee@gmail.com',
   phone: '+1 (925) 885-9137',
   location: 'San Francisco, CA',
-  linkedin: 'https://linkedin.com/in/aaronlee',
+  linkedin: 'https://www.linkedin.com/in/aaronlee5702/',
   github: 'https://github.com/aaronlee',
   website: 'https://aaronlee.dev',
   summary: 'Third-year undergraduate studying mechanical engineering with a focus on materials, manufacturing, and robotics. Additionally, I researched in the field of biotech with a focus on automating the culturing of brain cells.'

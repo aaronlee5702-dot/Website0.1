@@ -105,10 +105,6 @@ export default function About() {
                   </div>
                   <div className="flex items-center text-gray-700">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                    Renewable Energy Research
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                     Mentoring Students
                   </div>
                 </div>
