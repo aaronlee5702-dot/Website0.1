@@ -218,7 +218,7 @@ export const personalInfo = {
   phone: '+1 (925) 885-9137',
   location: 'San Francisco, CA',
   linkedin: 'https://www.linkedin.com/in/aaronlee5702/',
-  github: 'https://github.com/aaronlee',
+  github: 'https://github.com/aaronlee5702-dot',
   website: 'https://aaronlee.dev',
   summary: 'Third-year undergraduate studying mechanical engineering with a focus on materials, manufacturing, and robotics. Additionally, I researched in the field of biotech with a focus on automating the culturing of brain cells.'
 }; 
