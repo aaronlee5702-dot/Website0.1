@@ -27,21 +27,19 @@ export default function About() {
           <div className="space-y-6">
             <div className="prose prose-lg text-gray-600">
               <p>
-                With over 6 years of experience in mechanical engineering, I specialize in designing and developing 
+                With over 6 years of CAD and design experience, I specialize in designing and developing 
                 innovative solutions for complex engineering challenges. My journey began with a fascination for 
-                how things work and has evolved into a career focused on robotics, renewable energy, and advanced 
+                how things work and has evolved into a career focused on robotics, medical technologies, and advanced 
                 manufacturing processes.
               </p>
               <p>
                 I believe in the power of interdisciplinary collaboration and have successfully led teams to deliver 
-                projects that not only meet technical requirements but also drive business value. My approach combines 
+                projects that not only meet technical requirements but also drive advancement. My approach combines 
                 rigorous engineering principles with creative problem-solving to develop solutions that are both 
                 innovative and practical.
               </p>
               <p>
-                When I'm not designing the next breakthrough in mechanical systems, you can find me mentoring young 
-                engineers, contributing to open-source projects, or exploring the latest advancements in automation 
-                and AI integration in mechanical systems.
+                When I'm not designing new projects, you can find me mentoring young engineers on CAD and circuit analysis. I also like to spend my off time playing tennis and hiking.
               </p>
             </div>
 
