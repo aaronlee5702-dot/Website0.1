@@ -11,11 +11,11 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Let&apos;s Connect</h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                I'm always interested in discussing new opportunities, innovative projects, 
-                and potential collaborations. Whether you're looking for engineering expertise, 
-                consulting services, or just want to connect with a fellow engineer, I'd love to hear from you.
+                I&apos;m always interested in discussing new opportunities, innovative projects, 
+                and potential collaborations. Whether you&apos;re looking for engineering expertise, 
+                consulting services, or just want to connect with a fellow engineer, I&apos;d love to hear from you.
               </p>
             </div>
 

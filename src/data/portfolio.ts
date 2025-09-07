@@ -113,9 +113,9 @@ export const experience: Experience[] = [
   {
     id: '1',
     company: 'Advanced Manufacturing Solutions',
-    position: 'TSMC: Epitaxy Equipement Engineer Intern',
-    duration: '2022 - Present',
-    location: 'San Francisco, CA',
+    position: 'Taiwan Semiconductor Manufacturing Company ( TSMC ): Epitaxy Equipement Engineer Intern',
+    duration: 'May 2025 - Aug 2025',
+    location: 'Phoenix, AZ',
     description: [
       'Experimented with Spot Lamp positionings to ensure an ideal thickness and thickness profile of a silicon wafer.',
       'Collaborated with ASM to analyze different heating positions & tuning temperature inputs to ensure uniform wafer thickness profiles',

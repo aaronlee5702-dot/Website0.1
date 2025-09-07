@@ -19,7 +19,7 @@ export default function Experience() {
           <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-blue-200 hidden md:block"></div>
 
           <div className="space-y-8">
-            {experience.map((exp, index) => (
+            {experience.map((exp) => (
               <div key={exp.id} className="relative">
                 {/* Timeline dot */}
                 <div className="absolute left-4 w-3 h-3 bg-blue-600 rounded-full border-2 border-white shadow-md hidden md:block"></div>

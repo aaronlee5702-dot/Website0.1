@@ -26,7 +26,7 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Hi, I'm{' '}
+                Hi, I&apos;m{' '}
                 <span className="text-cyan-300">{personalInfo.name.split(' ')[0]}</span>
               </h1>
               <h2 className="text-2xl lg:text-3xl text-gray-200 font-medium">

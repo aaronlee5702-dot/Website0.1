@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { ExternalLink, Github, Calendar, Wrench, BarChart3, Cog, FlaskConical } from 'lucide-react';
-import { projects, Project } from '@/data/portfolio';
+import { ExternalLink, Calendar, Wrench, BarChart3, Cog, FlaskConical } from 'lucide-react';
+import { projects } from '@/data/portfolio';
 import { useRouter } from 'next/navigation';
 
 export default function Projects() {

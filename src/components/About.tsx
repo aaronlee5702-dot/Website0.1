@@ -1,7 +1,7 @@
 'use client';
 
-import { GraduationCap, Award, Target, Users } from 'lucide-react';
-import { education, personalInfo } from '@/data/portfolio';
+import { GraduationCap, Award } from 'lucide-react';
+import { education } from '@/data/portfolio';
 
 export default function About() {
   const certificates = [
@@ -39,7 +39,7 @@ export default function About() {
                 innovative and practical.
               </p>
               <p>
-                When I'm not designing new projects, you can find me mentoring young engineers on CAD and circuit analysis. I also like to spend my off time playing tennis and hiking.
+                When I&apos;m not designing new projects, you can find me mentoring young engineers on CAD and circuit analysis. I also like to spend my off time playing tennis and hiking.
               </p>
             </div>
 
