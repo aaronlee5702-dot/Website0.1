@@ -13,21 +13,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AleePort - Aaron Lee | Mechanical Engineer Portfolio",
-  description: "AleePort - Professional portfolio of Aaron Lee, experienced mechanical engineer specializing in robotics, renewable energy, and advanced manufacturing. View innovative engineering solutions and projects.",
-  keywords: ["AleePort", "Aaron Lee", "mechanical engineer", "robotics", "renewable energy", "manufacturing", "CAD", "ANSYS", "SolidWorks", "engineering portfolio"],
+  title: "Aaron Lee Engineering Portfolio | Mechanical Engineer",
+  description: "Aaron Lee Engineering Portfolio - Professional portfolio of Aaron Lee, experienced mechanical engineer specializing in robotics, medical technologies, and advanced manufacturing. View innovative engineering solutions and projects.",
+  keywords: ["Aaron Lee", "mechanical engineer", "robotics", "medical technologies", "manufacturing", "CAD", "ANSYS", "SolidWorks", "engineering portfolio", "TSMC", "semiconductor"],
   authors: [{ name: "Aaron Lee" }],
   creator: "Aaron Lee",
   openGraph: {
-    title: "AleePort - Aaron Lee | Mechanical Engineer",
-    description: "Professional portfolio showcasing innovative mechanical engineering solutions in robotics, renewable energy, and manufacturing",
+    title: "Aaron Lee Engineering Portfolio | Mechanical Engineer",
+    description: "Professional portfolio showcasing innovative mechanical engineering solutions in robotics, medical technologies, and manufacturing",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AleePort - Aaron Lee | Mechanical Engineer",
-    description: "Professional portfolio showcasing innovative mechanical engineering solutions in robotics, renewable energy, and manufacturing",
+    title: "Aaron Lee Engineering Portfolio | Mechanical Engineer",
+    description: "Professional portfolio showcasing innovative mechanical engineering solutions in robotics, medical technologies, and manufacturing",
   },
   robots: {
     index: true,
