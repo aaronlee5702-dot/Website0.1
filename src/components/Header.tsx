@@ -30,7 +30,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo/Name */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gray-900">AleePort</h1>
+            <h1 className="text-2xl font-bold text-gray-900">Aaron Lee Portfolio</h1>
             <p className="text-sm text-gray-600">{personalInfo.title}</p>
           </div>
 
