@@ -112,6 +112,19 @@ export const projects: Project[] = [
 export const experience: Experience[] = [
   {
     id: '1',
+    company: 'Tsao Lab: NeuroVision',
+    position: 'Mechanical Design Engineer',
+    duration: '2025 - Present',
+    location: 'Berkeley, CA',
+    description: [
+      'Design specific experimental apparatuses, like an interactive screen that helps current experiments on the psychology of monkeys',
+      'Collaborated with PHD students to design a seat and an experimental cage to ensure no harm and cooperation with the animals.',
+      'Designed a custom imaging scope tool to test ultrasonic neuromodulation in mice and discovered cortical activity patterns consistent with auditory pathways stimulation rather than direct neuromodulation.'
+    ],
+    technologies: ['SolidWorks', 'CAD', 'Experimental Design', 'Neuroscience Equipment']
+  },
+  {
+    id: '2',
     company: 'Advanced Manufacturing Solutions',
     position: 'Taiwan Semiconductor Manufacturing Company ( TSMC ): Epitaxy Equipement Engineer Intern',
     duration: 'May 2025 - Aug 2025',
