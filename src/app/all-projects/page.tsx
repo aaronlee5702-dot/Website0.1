@@ -1,11 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { ExternalLink, Calendar, Wrench, BarChart3, Cog, FlaskConical } from 'lucide-react';
+import { ArrowLeft, Calendar, ExternalLink, Wrench, BarChart3, Cog, FlaskConical } from 'lucide-react';
 import { projects } from '@/data/portfolio';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
-export default function Projects() {
+export default function AllProjectsPage() {
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const router = useRouter();
 
@@ -36,28 +37,38 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-12 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Projects</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-            A showcase of innovative engineering solutions across design, analysis, manufacturing, and research
-          </p>
-          
-          {/* All Projects Button */}
-          <div className="flex justify-center mb-8">
-            <button
-              onClick={() => router.push('/all-projects')}
-              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium shadow-lg hover:shadow-xl"
-            >
-              <span>All Projects</span>
-              <ExternalLink className="w-4 h-4" />
-            </button>
+    <div className="min-h-screen bg-gray-50">
+      {/* Navigation */}
+      <div className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <Link 
+            href="/"
+            className="inline-flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Back to Home</span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Header with Aurora Effect */}
+      <div className="relative h-64 aurora-bg overflow-hidden">
+        <div className="aurora-content h-full">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">All Projects</h1>
+              <p className="text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-md">
+                Explore my complete portfolio of engineering projects across design, analysis, manufacturing, and research
+              </p>
+            </div>
           </div>
         </div>
+      </div>
 
+      {/* Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -75,7 +86,7 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
@@ -147,7 +158,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Action Buttons */}
+                {/* Action Button */}
                 <div className="flex space-x-2">
                   <div className="flex items-center space-x-1 border border-gray-300 text-gray-700 px-3 py-1.5 rounded-lg group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-300 transition-colors duration-200 text-xs font-medium">
                     <ExternalLink className="w-3 h-3" />
@@ -158,7 +169,15 @@ export default function Projects() {
             </div>
           ))}
         </div>
+
+        {/* Empty State */}
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg">No projects found in this category.</p>
+          </div>
+        )}
       </div>
-    </section>
+    </div>
   );
-} 
+}
+

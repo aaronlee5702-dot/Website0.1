@@ -124,7 +124,7 @@ export default function Hero() {
                   </div>
                   <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/10 backdrop-blur-sm border border-purple-300/30 rounded-lg p-4">
                     <div className="text-2xl font-bold text-purple-300 drop-shadow-lg">15+</div>
-                    <div className="text-sm text-gray-200 drop-shadow-md">Technologies</div>
+                    <div className="text-sm text-gray-200 drop-shadow-md">Engineering Skills</div>
                   </div>
                   <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/10 backdrop-blur-sm border border-blue-300/30 rounded-lg p-4">
                     <div className="text-2xl font-bold text-blue-300 drop-shadow-lg">2</div>
