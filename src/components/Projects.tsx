@@ -17,9 +17,12 @@ export default function Projects() {
     { id: 'research', name: 'Research', icon: <FlaskConical className="w-4 h-4" /> },
   ];
 
+  // Show only first 4 projects on home page
+  const featuredProjects = projects.slice(0, 4);
+  
   const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+    ? featuredProjects 
+    : featuredProjects.filter(project => project.category === activeFilter);
 
   const getCategoryColor = (category: string) => {
     const colors = {

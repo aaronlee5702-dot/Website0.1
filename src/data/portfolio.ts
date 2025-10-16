@@ -106,6 +106,22 @@ export const projects: Project[] = [
       'Solidworks FEA practice',
       'Validated with wind tunnel experiments'
     ]
+  },
+  {
+    id: '5',
+    title: 'SEB: Tracking Project',
+    description: 'Space Enterprise at Berkeley satellite tracking system for real-time orbital monitoring.',
+    detailedDescription: 'This project involved developing a comprehensive satellite tracking system for Space Enterprise at Berkeley (SEB) to monitor and predict satellite positions in real-time. The system integrates GPS data, orbital mechanics calculations, and telemetry processing to provide accurate location tracking and communication window predictions. The project required extensive work with coordinate system transformations, orbital propagation algorithms, and ground station communication protocols. Python was used for data processing and analysis, while MATLAB handled complex orbital mechanics simulations. The tracking system features a user-friendly interface for mission control operations, automated alerting for critical events, and data logging for post-mission analysis. This project demonstrated the practical application of aerospace engineering principles and software development skills in a real-world space mission context.',
+    technologies: ['Python', 'MATLAB', 'GPS', 'Orbital Mechanics', 'Data Analysis', 'Systems Engineering'],
+    category: 'analysis',
+    image: '/projects/satellite-tracking.jpg',
+    duration: '5 months',
+    highlights: [
+      'Real-time satellite position tracking',
+      'Automated communication window predictions',
+      'Integration with ground station systems',
+      'Reduced tracking errors by 40%'
+    ]
   }
 ];
 
