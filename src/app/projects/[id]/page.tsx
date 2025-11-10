@@ -45,13 +45,23 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       {/* Navigation */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link 
-            href="/"
-            className="inline-flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Portfolio</span>
-          </Link>
+          <div className="flex items-center gap-3 text-gray-600">
+            <Link 
+              href="/"
+              className="hover:text-blue-600 transition-colors"
+            >
+              Portfolio: Home page
+            </Link>
+            <span className="text-gray-400">&gt;</span>
+            <Link 
+              href="/all-projects"
+              className="hover:text-blue-600 transition-colors"
+            >
+              All Projects
+            </Link>
+            <span className="text-gray-400">&gt;</span>
+            <span className="text-gray-900 font-medium">{project.title}</span>
+          </div>
         </div>
       </div>
 
@@ -199,7 +209,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4 pt-6 border-t border-gray-200">
             <Link
-              href="/#projects"
+              href="/all-projects"
               className="inline-flex items-center space-x-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 font-medium"
             >
               <ArrowLeft className="w-5 h-5" />

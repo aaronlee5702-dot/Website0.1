@@ -139,26 +139,56 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* Continuous Learning */}
+        {/* Continuous Learning & Relevant Coursework */}
         <div className="mt-16">
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Continuous Learning</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span className="text-gray-700">Biomedical Devices Research</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Continuous Learning */}
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Continuous Learning</h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                  <span className="text-gray-700">Biomedical Devices Research</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                  <span className="text-gray-700">Advanced CFD Techniques (ANSYS) and FEA (SolidWorks)</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                  <span className="text-gray-700">Additive Manufacturing: Bambu H2D</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                  <span className="text-gray-700">IoT Applications and Circuit Analysis</span>
+                </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span className="text-gray-700">Advanced CFD Techniques (ANSYS) and FEA (SolidWorks)</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span className="text-gray-700">Additive Manufacturing: Bambu H2D</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                <span className="text-gray-700">IoT Applications and Circuit Analysis</span>
+            </div>
+
+            {/* Relevant Coursework */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Relevant Coursework</h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">[MEc178] - Manufacturing and Designing for the Human Body</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Advanced Thermodynamics</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Fluid Mechanics & Heat Transfer</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Machine Design & Manufacturing</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Control Systems Engineering</span>
+                </div>
               </div>
             </div>
           </div>

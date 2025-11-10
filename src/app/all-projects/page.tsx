@@ -41,13 +41,16 @@ export default function AllProjectsPage() {
       {/* Navigation */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link 
-            href="/"
-            className="inline-flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Home</span>
-          </Link>
+          <div className="flex items-center gap-3 text-gray-600">
+            <Link 
+              href="/"
+              className="hover:text-blue-600 transition-colors"
+            >
+              Portfolio: Home page
+            </Link>
+            <span className="text-gray-400">&gt;</span>
+            <span className="text-gray-900 font-medium">All Projects</span>
+          </div>
         </div>
       </div>
 
