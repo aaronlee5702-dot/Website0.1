@@ -8,6 +8,9 @@ export interface Project {
   image: string;
   duration: string;
   highlights: string[];
+  images?: string[]; // Array of project images to display
+  videos?: string[]; // Array of project videos to display
+  pdfs?: string[]; // Array of project PDF documents to display
   link?: string;
 }
 
@@ -74,6 +77,20 @@ export const projects: Project[] = [
       'Reduced pressure drop by 15%',
       'Validated results with experimental data',
       'Published findings in peer-reviewed journal'
+    ],
+    images: [
+      '/projects/incubator/assembly-1.png',
+      '/projects/incubator/cad-model.jpg',
+      '/projects/incubator/cone-piece.png',
+      '/projects/incubator/print-detail.jpg',
+      '/projects/incubator/motor-assembly.jpg',
+      '/projects/incubator/electronics.jpg',
+      '/projects/incubator/housing-1.jpg',
+      '/projects/incubator/cad-screen.jpg',
+      '/projects/incubator/housing-2.jpg'
+    ],
+    videos: [
+      '/projects/incubator/system-demo.mov'
     ]
   },
   {
@@ -90,6 +107,12 @@ export const projects: Project[] = [
       'Reduced material waste by 40%',
       'Established quality control protocols',
       'Certified for aerospace applications'
+    ],
+    images: [
+      '/projects/prusa-mk3s/cad-holder.png'
+    ],
+    pdfs: [
+      '/projects/prusa-mk3s/measurements.pdf'
     ]
   },
   {
@@ -105,6 +128,13 @@ export const projects: Project[] = [
       'Increased energy output by 18%',
       'Solidworks FEA practice',
       'Validated with wind tunnel experiments'
+    ],
+    images: [
+      '/projects/wind-turbine/analysis-1.png',
+      '/projects/wind-turbine/analysis-2.png',
+      '/projects/wind-turbine/analysis-3.png',
+      '/projects/wind-turbine/analysis-4.png',
+      '/projects/wind-turbine/analysis-5.png'
     ]
   },
   {
@@ -121,6 +151,52 @@ export const projects: Project[] = [
       'Automated communication window predictions',
       'Integration with ground station systems',
       'Reduced tracking errors by 40%'
+    ],
+    images: [
+      '/projects/satellite-tracking/tracking-1.jpg',
+      '/projects/satellite-tracking/tracking-2.jpg',
+      '/projects/satellite-tracking/tracking-3.jpg',
+      '/projects/satellite-tracking/tracking-4.jpg',
+      '/projects/satellite-tracking/tracking-5.png',
+      '/projects/satellite-tracking/tracking-1.gif',
+      '/projects/satellite-tracking/tracking-2.gif'
+    ],
+    videos: [
+      '/projects/satellite-tracking/tracking-video-1.mov',
+      '/projects/satellite-tracking/tracking-video-2.mov'
+    ]
+  },
+  {
+    id: '6',
+    title: 'Portable Microscope',
+    description: 'Custom-designed portable microscope system for field research and educational applications.',
+    detailedDescription: 'This manufacturing and design project focused on creating a portable microscope system that combines precision optics with robust mechanical design for field use. The project tested my skills in manufacturing design, mechanical assembly, and technical communication. The portable microscope was designed to be lightweight, durable, and easy to transport while maintaining high optical quality for biological and material sample examination.\n\nThe project encompassed:\n• Complete mechanical design and CAD modeling of the microscope structure and adjustment mechanisms\n• Selection and integration of optical components including objective lenses and illumination systems\n• Design for manufacturability with consideration for 3D printing and precision machining\n• Development of technical documentation and user guides for operation and maintenance\n• Prototype fabrication and iterative testing to optimize performance and usability\n• Focus on ergonomic design for extended field use\n\nThis project demonstrated comprehensive understanding of precision manufacturing, optical systems integration, and effective technical communication through detailed documentation and presentation materials.',
+    technologies: ['CAD', 'SolidWorks', '3D Printing', 'Optical Design', 'Manufacturing', 'Technical Communication'],
+    category: 'manufacturing',
+    image: '/projects/portable-microscope.jpg',
+    duration: '3 months',
+    highlights: [
+      'Designed portable system with 400x magnification capability',
+      'Achieved weight reduction of 60% compared to traditional microscopes',
+      'Developed comprehensive technical documentation',
+      'Successfully fabricated and tested working prototype'
+    ],
+    images: [
+      '/projects/portable-microscope/microscope-1.png',
+      '/projects/portable-microscope/microscope-2.png',
+      '/projects/portable-microscope/microscope-3.png'
+    ],
+    videos: [
+      '/projects/portable-microscope/microscope-demo.mov'
+    ],
+    pdfs: [
+      '/projects/portable-microscope/box-top.pdf',
+      '/projects/portable-microscope/camera-cover.pdf',
+      '/projects/portable-microscope/camera-mount.pdf',
+      '/projects/portable-microscope/drawer.pdf',
+      '/projects/portable-microscope/lid.pdf',
+      '/projects/portable-microscope/pin.pdf',
+      '/projects/portable-microscope/specimen-holder.pdf'
     ]
   }
 ];

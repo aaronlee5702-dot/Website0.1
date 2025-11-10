@@ -126,6 +126,76 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </div>
 
+          {/* Project Images & Videos */}
+          {((project.images && project.images.length > 0) || (project.videos && project.videos.length > 0) || (project.pdfs && project.pdfs.length > 0)) && (
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Project Gallery</h2>
+              <div className={`grid gap-4 ${
+                (project.images?.length || 0) + (project.videos?.length || 0) + (project.pdfs?.length || 0) === 1 
+                  ? 'grid-cols-1' 
+                  : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+              }`}>
+                {/* Images */}
+                {project.images?.map((image, index) => {
+                  const totalItems = (project.images?.length || 0) + (project.videos?.length || 0) + (project.pdfs?.length || 0);
+                  const isSingleItem = totalItems === 1;
+                  
+                  return (
+                    <div
+                      key={`image-${index}`}
+                      className={`relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-100 ${
+                        isSingleItem ? 'aspect-[4/3]' : 'aspect-square'
+                      }`}
+                    >
+                      <img
+                        src={image}
+                        alt={`${project.title} - Image ${index + 1}`}
+                        className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  );
+                })}
+                {/* Videos */}
+                {project.videos?.map((video, index) => (
+                  <div
+                    key={`video-${index}`}
+                    className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-900"
+                  >
+                    <video
+                      src={video}
+                      controls
+                      className="w-full h-full object-cover"
+                      preload="metadata"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                ))}
+                {/* PDFs */}
+                {project.pdfs?.map((pdf, index) => (
+                  <div
+                    key={`pdf-${index}`}
+                    className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-50"
+                  >
+                    <iframe
+                      src={pdf}
+                      className="w-full h-full"
+                      title={`${project.title} - Document ${index + 1}`}
+                    />
+                    <a
+                      href={pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute bottom-2 right-2 bg-blue-600 text-white px-3 py-1.5 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg"
+                    >
+                      Open PDF
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4 pt-6 border-t border-gray-200">
             <Link
