@@ -179,10 +179,6 @@ export default function Skills() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  <span className="text-gray-700">Fluid Mechanics & Heat Transfer</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span className="text-gray-700">Machine Design & Manufacturing</span>
                 </div>
                 <div className="flex items-center space-x-3">
