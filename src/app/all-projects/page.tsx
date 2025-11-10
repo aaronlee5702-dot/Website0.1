@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowLeft, Calendar, ExternalLink, Wrench, BarChart3, Cog, FlaskConical } from 'lucide-react';
+import { Calendar, ExternalLink, Wrench, BarChart3, Cog, FlaskConical } from 'lucide-react';
 import { projects } from '@/data/portfolio';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
