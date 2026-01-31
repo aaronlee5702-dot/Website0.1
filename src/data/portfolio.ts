@@ -204,6 +204,19 @@ export const projects: Project[] = [
 export const experience: Experience[] = [
   {
     id: '1',
+    company: 'iRhythm Technologies',
+    position: 'Tools & Fixtures System Engineer',
+    duration: 'Jan 2026 - Present',
+    location: 'San Francisco, CA',
+    description: [
+      'Designed, assembled & validated manufacturing test fixtures. Took ownership of smaller subsystems like the Paircheck and Packaging stations. Conducted root cause analysis on recurring failures like increasing DC gain with a Functional Circuit Tester (FCT) fixture.',
+      'Conducted data analysis and converted production data from Splunk UI to Snowflake UI for faster live updates and intuitive filtering.',
+      'Updated requirements, design documentation, and test protocols, plus running verification testing + data analysis to ensure fixtures meet performance and compliance needs.'
+    ],
+    technologies: ['SolidWorks', 'CAD', 'Data Analysis', 'Splunk', 'Snowflake', 'Test Fixtures', 'Manufacturing']
+  },
+  {
+    id: '2',
     company: 'Tsao Lab: NeuroVision',
     position: 'Mechanical Design Engineer',
     duration: '2025 - Present',
@@ -216,7 +229,7 @@ export const experience: Experience[] = [
     technologies: ['SolidWorks', 'CAD', 'Experimental Design', 'Neuroscience Equipment']
   },
   {
-    id: '2',
+    id: '3',
     company: 'Advanced Manufacturing Solutions',
     position: 'Taiwan Semiconductor Manufacturing Company ( TSMC ): Epitaxy Equipement Engineer Intern',
     duration: 'May 2025 - Aug 2025',
