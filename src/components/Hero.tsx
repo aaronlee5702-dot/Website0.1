@@ -104,11 +104,16 @@ export default function Hero() {
               
               <div className="relative z-10 space-y-6">
                 <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg shadow-cyan-500/20">
-                    <span className="text-4xl font-bold text-white">
-                      {personalInfo.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
+                  <div
+                    role="img"
+                    aria-label={personalInfo.name}
+                    className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg shadow-cyan-500/20 ring-2 ring-white/40 bg-no-repeat"
+                    style={{
+                      backgroundImage: 'url(/profile.png)',
+                      backgroundSize: '211%',
+                      backgroundPosition: '45% 55%',
+                    }}
+                  ></div>
                   <h3 className="text-xl font-semibold text-white drop-shadow-lg">{personalInfo.name}</h3>
                   <p className="text-gray-200 drop-shadow-md">{personalInfo.title}</p>
                 </div>
