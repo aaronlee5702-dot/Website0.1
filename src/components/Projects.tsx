@@ -1,28 +1,14 @@
 'use client';
 
-import { useState } from 'react';
-import { ExternalLink, Calendar, Wrench, BarChart3, Cog, FlaskConical } from 'lucide-react';
+import { ExternalLink, Calendar, Wrench, BarChart3, Cog, FlaskConical, Zap, ArrowRight } from 'lucide-react';
 import { projects } from '@/data/portfolio';
 import { useRouter } from 'next/navigation';
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState<string>('all');
   const router = useRouter();
-
-  const categories = [
-    { id: 'all', name: 'All Projects', icon: <Wrench className="w-4 h-4" /> },
-    { id: 'design', name: 'Design', icon: <Cog className="w-4 h-4" /> },
-    { id: 'analysis', name: 'Analysis', icon: <BarChart3 className="w-4 h-4" /> },
-    { id: 'manufacturing', name: 'Manufacturing', icon: <Wrench className="w-4 h-4" /> },
-    { id: 'research', name: 'Research', icon: <FlaskConical className="w-4 h-4" /> },
-  ];
 
   // Show only first 4 projects on home page
   const featuredProjects = projects.slice(0, 4);
-  
-  const filteredProjects = activeFilter === 'all' 
-    ? featuredProjects 
-    : featuredProjects.filter(project => project.category === activeFilter);
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -59,27 +45,32 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 text-sm ${
-                activeFilter === category.id
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
-              }`}
-            >
-              {category.icon}
-              <span>{category.name}</span>
-            </button>
-          ))}
+        {/* Bonus Soldering Card */}
+        <div className="max-w-2xl mx-auto mb-8">
+          <div
+            onClick={() => router.push('/soldering-projects')}
+            className="flex items-center justify-between bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-xl p-4 cursor-pointer hover:shadow-md transition-all duration-300 group"
+          >
+            <div className="flex items-center space-x-3">
+              <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 text-white">
+                <Zap className="w-5 h-5" />
+              </div>
+              <div>
+                <h5 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                  Soldering
+                </h5>
+                <p className="text-sm text-gray-600">
+                  Explore my Bonus Soldering Projects
+                </p>
+              </div>
+            </div>
+            <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-200" />
+          </div>
         </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredProjects.map((project) => (
+          {featuredProjects.map((project) => (
             <div
               key={project.id}
               onClick={() => handleProjectClick(project.id)}

@@ -87,10 +87,14 @@ export const projects: Project[] = [
       '/projects/incubator/electronics.jpg',
       '/projects/incubator/housing-1.jpg',
       '/projects/incubator/cad-screen.jpg',
-      '/projects/incubator/housing-2.jpg'
+      '/projects/incubator/housing-2.jpg',
+      '/projects/incubator/IMG_9906.jpeg',
+      '/projects/incubator/IMG_9907.jpeg',
+      '/projects/incubator/IMG_9908.jpeg'
     ],
     videos: [
-      '/projects/incubator/system-demo.mov'
+      '/projects/incubator/system-demo.mov',
+      '/projects/incubator/IMG_8168.mov'
     ]
   },
   {
@@ -198,8 +202,45 @@ export const projects: Project[] = [
       '/projects/portable-microscope/pin.pdf',
       '/projects/portable-microscope/specimen-holder.pdf'
     ]
+  },
+  {
+    id: '7',
+    title: 'Self Balancing Cube',
+    description: '',
+    detailedDescription: '',
+    technologies: [],
+    category: 'design',
+    image: '',
+    duration: '',
+    highlights: []
+  },
+  {
+    id: '8',
+    title: 'DIY Gimbal',
+    description: '',
+    detailedDescription: '',
+    technologies: [],
+    category: 'design',
+    image: '',
+    duration: '',
+    highlights: []
+  },
+  {
+    id: '9',
+    title: 'Plant Growing Hydroponic System',
+    description: '',
+    detailedDescription: '',
+    technologies: [],
+    category: 'design',
+    image: '',
+    duration: '',
+    highlights: []
   }
 ];
+
+// Soldering projects shown in the "Bonus Soldering Projects" subfolder.
+// Add new soldering projects here as they are completed.
+export const solderingProjects: Project[] = [];
 
 export const experience: Experience[] = [
   {
@@ -313,7 +354,8 @@ export const skills: Skill[] = [
       { name: 'Injection Molding', logo: '/logos/injection-molding.svg', level: 85 },
       { name: 'Welding', logo: '/logos/welding.svg', level: 82 },
       { name: 'Sheet Metal', logo: '/logos/sheet-metal.svg', level: 86 },
-      { name: 'Assembly', logo: '/logos/assembly.svg', level: 89 }
+      { name: 'Assembly', logo: '/logos/assembly.svg', level: 89 },
+      { name: 'Soldering', logo: '/logos/soldering.svg', level: 85 }
     ]
   },
   {

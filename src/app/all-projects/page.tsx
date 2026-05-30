@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Calendar, ExternalLink, Wrench, BarChart3, Cog, FlaskConical } from 'lucide-react';
+import { Calendar, ExternalLink, Wrench, BarChart3, Cog, FlaskConical, Zap } from 'lucide-react';
 import { projects } from '@/data/portfolio';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -171,10 +171,54 @@ export default function AllProjectsPage() {
               </div>
             </div>
           ))}
+
+          {/* Bonus Soldering Projects subfolder card */}
+          {(activeFilter === 'all' || activeFilter === 'manufacturing') && (
+            <div
+              onClick={() => router.push('/soldering-projects')}
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer transform hover:-translate-y-1"
+            >
+              {/* Image with Aurora Effect */}
+              <div className="relative h-32 aurora-bg overflow-hidden">
+                <div className="aurora-content h-full">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-white text-center">
+                      <div className="text-6xl drop-shadow-lg">
+                        <Zap />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute top-3 right-3">
+                    <span className="px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                      Bonus
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-4">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                    Bonus Soldering Projects
+                  </h3>
+                </div>
+                <p className="text-gray-600 mb-3 line-clamp-2 text-sm">
+                  A collection of my soldering and electronics projects.
+                </p>
+                <div className="flex space-x-2">
+                  <div className="flex items-center space-x-1 border border-gray-300 text-gray-700 px-3 py-1.5 rounded-lg group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-300 transition-colors duration-200 text-xs font-medium">
+                    <ExternalLink className="w-3 h-3" />
+                    <span>View Folder</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Empty State */}
-        {filteredProjects.length === 0 && (
+        {filteredProjects.length === 0 && activeFilter !== 'all' && activeFilter !== 'manufacturing' && (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">No projects found in this category.</p>
           </div>
