@@ -245,9 +245,22 @@ export const solderingProjects: Project[] = [];
 export const experience: Experience[] = [
   {
     id: '1',
+    company: 'Edulis Labs',
+    position: 'Rapid Prototyping Mechanical Engineer',
+    duration: 'Aug 2026 - Present',
+    location: 'San Francisco, CA',
+    description: [
+      'Design and fabricate enclosures, mounts, and mechanical assemblies in CAD for LightSync, a high power LED photochemical device that selectively lightens hair without the damage of conventional bleach chemistry.',
+      'Iterate on panel form factor and prototype geometry to meet optical, thermal, and electronic integration requirements, including liquid cooled LED panels and heat sink contact that is critical to treatment performance.',
+      'Translate stylist and customer feedback into revised prototypes alongside the Chief Commercial Officer, and maintain documentation of design versions, fabrication settings, and iteration notes.'
+    ],
+    technologies: ['SolidWorks', 'CAD', 'Rapid Prototyping', '3D Printing', 'Thermal Management', 'Design Documentation']
+  },
+  {
+    id: '2',
     company: 'iRhythm Technologies',
-    position: 'Tools & Fixtures System Engineer',
-    duration: 'Jan 2026 - Present',
+    position: 'Tools & Fixtures System Mechanical Engineer',
+    duration: 'Jan 2026 - Aug 2026',
     location: 'San Francisco, CA',
     description: [
       'Designed, assembled & validated manufacturing test fixtures. Took ownership of smaller subsystems like the Paircheck and Packaging stations. Conducted root cause analysis on recurring failures like increasing DC gain with a Functional Circuit Tester (FCT) fixture.',
@@ -257,10 +270,10 @@ export const experience: Experience[] = [
     technologies: ['SolidWorks', 'CAD', 'Data Analysis', 'Splunk', 'Snowflake', 'Test Fixtures', 'Manufacturing']
   },
   {
-    id: '2',
+    id: '3',
     company: 'Tsao Lab: NeuroVision',
     position: 'Mechanical Design Engineer',
-    duration: '2025 - Present',
+    duration: 'Aug 2025 - Dec 2025',
     location: 'Berkeley, CA',
     description: [
       'Design specific experimental apparatuses, like an interactive screen that helps current experiments on the psychology of monkeys',
@@ -270,7 +283,7 @@ export const experience: Experience[] = [
     technologies: ['SolidWorks', 'CAD', 'Experimental Design', 'Neuroscience Equipment']
   },
   {
-    id: '3',
+    id: '4',
     company: 'Advanced Manufacturing Solutions',
     position: 'Taiwan Semiconductor Manufacturing Company ( TSMC ): Epitaxy Equipement Engineer Intern',
     duration: 'May 2025 - Aug 2025',
