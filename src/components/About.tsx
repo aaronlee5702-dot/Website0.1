@@ -9,8 +9,51 @@ export default function About() {
       icon: <Award className="w-6 h-6" />,
       title: "Berkeley Certificate in Design Innovation",
       description: "Interdisciplinary program focusing on human-centered design and innovation methodologies"
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "Certified SOLIDWORKS Associate (CSWA)",
+      description: "Core competency in 3D part modeling, assemblies, and drawings with SOLIDWORKS",
+      inProgress: true
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "Certified SOLIDWORKS Associate \u2013 Simulation (CSWA-S)",
+      description: "Fundamentals of linear static finite element analysis in SOLIDWORKS Simulation",
+      inProgress: true
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "MathWorks Certified MATLAB Associate",
+      description: "Core MATLAB programming, data analysis, and visualization workflows",
+      inProgress: true
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "MathWorks Certified Simulink Associate",
+      description: "Model-based design and dynamic system simulation in Simulink",
+      inProgress: true
     }
   ];
+
+  const renderCertificate = (certificate: typeof certificates[number], index: number) => (
+    <div key={index} className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
+      <div className="flex-shrink-0 text-blue-600">
+        {certificate.icon}
+      </div>
+      <div>
+        <div className="flex items-center flex-wrap gap-2 mb-1">
+          <h4 className="font-semibold text-gray-900">{certificate.title}</h4>
+          {certificate.inProgress && (
+            <span className="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-medium">
+              In Progress
+            </span>
+          )}
+        </div>
+        <p className="text-gray-600">{certificate.description}</p>
+      </div>
+    </div>
+  );
 
   return (
     <section id="about" className="py-20 bg-white">
@@ -46,17 +89,7 @@ export default function About() {
             {/* Certificates */}
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Certificates</h3>
-              {certificates.map((certificate, index) => (
-                <div key={index} className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
-                  <div className="flex-shrink-0 text-blue-600">
-                    {certificate.icon}
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">{certificate.title}</h4>
-                    <p className="text-gray-600">{certificate.description}</p>
-                  </div>
-                </div>
-              ))}
+              {certificates.slice(0, 3).map(renderCertificate)}
             </div>
           </div>
 
@@ -121,6 +154,11 @@ export default function About() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Certificates continued */}
+            <div className="space-y-4">
+              {certificates.slice(3).map(renderCertificate)}
             </div>
           </div>
         </div>

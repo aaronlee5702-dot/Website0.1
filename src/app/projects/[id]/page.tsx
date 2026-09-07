@@ -104,7 +104,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Description</h2>
             <div className="prose prose-lg text-gray-700 leading-relaxed">
-              <p>{project.detailedDescription}</p>
+              <p className="whitespace-pre-line">{project.detailedDescription}</p>
             </div>
           </div>
 

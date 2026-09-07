@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Code, Wrench, BarChart3, Cog, Users, Target, FlaskConical, Calendar, Zap, ArrowRight } from 'lucide-react';
+import { Wrench, BarChart3, Cog, Users, HeartPulse, SlidersHorizontal, Bot, FlaskConical, Calendar, Zap, ArrowRight, Award } from 'lucide-react';
 import { skills, projects } from '@/data/portfolio';
 import { useRouter } from 'next/navigation';
 
@@ -13,28 +13,31 @@ export default function Skills() {
   const categoryIcons = {
     'CAD/Design Software': <Cog className="w-6 h-6" />,
     'Analysis & Simulation': <BarChart3 className="w-6 h-6" />,
-    'Programming & Automation': <Code className="w-6 h-6" />,
+    'Controls & Automation': <SlidersHorizontal className="w-6 h-6" />,
     'Manufacturing & Processes': <Wrench className="w-6 h-6" />,
-    'Engineering Fundamentals': <Target className="w-6 h-6" />,
+    'Biotech & Medtech': <HeartPulse className="w-6 h-6" />,
+    'Robotics': <Bot className="w-6 h-6" />,
     'Project Management': <Users className="w-6 h-6" />,
   };
 
   const categoryColors = {
     'CAD/Design Software': 'from-blue-500 to-blue-600',
     'Analysis & Simulation': 'from-green-500 to-green-600',
-    'Programming & Automation': 'from-purple-500 to-purple-600',
+    'Controls & Automation': 'from-purple-500 to-purple-600',
     'Manufacturing & Processes': 'from-green-700 to-green-800',
-    'Engineering Fundamentals': 'from-blue-700 to-blue-800',
+    'Biotech & Medtech': 'from-blue-700 to-blue-800',
+    'Robotics': 'from-orange-500 to-orange-600',
     'Project Management': 'from-indigo-500 to-indigo-600',
   };
 
-  // Map each skill category to two closely related projects (by project id)
+  // Map each industry/sector to two closely related projects (by project id)
   const categoryProjects: Record<string, string[]> = {
     'CAD/Design Software': ['1', '6'],
     'Analysis & Simulation': ['4', '2'],
-    'Programming & Automation': ['1', '5'],
+    'Controls & Automation': ['1', '7'],
     'Manufacturing & Processes': ['3', '6'],
-    'Engineering Fundamentals': ['2', '4'],
+    'Biotech & Medtech': ['10', '2'],
+    'Robotics': ['1', '11'],
   };
 
   const getProjectIcon = (category: string) => {
@@ -55,9 +58,9 @@ export default function Skills() {
     <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Technical Skills and Projects</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A comprehensive toolkit spanning design, analysis, programming, and project management
+            Explore my experience by industry and sector, with the projects that back it up
           </p>
         </div>
 
@@ -191,6 +194,60 @@ export default function Skills() {
                   </div>
                 </div>
               )}
+
+              {/* Certifications in progress for CAD/Design Software */}
+              {skills[activeCategory].category === 'CAD/Design Software' && (
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                    Certifications
+                  </h4>
+                  <div className="flex items-center justify-between bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+                        <Award className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h5 className="font-bold text-gray-900">
+                          SOLIDWORKS Associate Certifications
+                        </h5>
+                        <p className="text-sm text-gray-600">
+                          Currently pursuing the Certified SOLIDWORKS Associate (CSWA) and Certified SOLIDWORKS Associate &ndash; Simulation (CSWA-S)
+                        </p>
+                      </div>
+                    </div>
+                    <span className="flex-shrink-0 ml-4 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-medium">
+                      In Progress
+                    </span>
+                  </div>
+                </div>
+              )}
+
+              {/* Certifications in progress for Analysis & Simulation */}
+              {skills[activeCategory].category === 'Analysis & Simulation' && (
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                    Certifications
+                  </h4>
+                  <div className="flex items-center justify-between bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-white">
+                        <Award className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h5 className="font-bold text-gray-900">
+                          MATLAB &amp; Simulink Associate Certifications
+                        </h5>
+                        <p className="text-sm text-gray-600">
+                          Currently pursuing the MathWorks Certified MATLAB Associate and Certified Simulink Associate
+                        </p>
+                      </div>
+                    </div>
+                    <span className="flex-shrink-0 ml-4 px-3 py-1 rounded-full bg-green-100 text-green-800 text-xs font-medium">
+                      In Progress
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -200,7 +257,7 @@ export default function Skills() {
           <div className="bg-white rounded-xl shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">Skills Overview</h3>
             <p className="text-center text-gray-600 mb-8">Click a category to view the skills</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {skills.map((category, index) => (
                 <button
                   key={index}

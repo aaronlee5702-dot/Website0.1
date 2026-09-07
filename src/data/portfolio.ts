@@ -235,6 +235,49 @@ export const projects: Project[] = [
     image: '',
     duration: '',
     highlights: []
+  },
+  {
+    id: '10',
+    title: 'Prosthetic Arm',
+    description: 'Custom carbon fiber prosthetic attachment built to let an amputee perform pull-ups and curls in the gym.',
+    detailedDescription: 'The purpose of this project was to gain a deeper understanding of engineering for the human body. Designing around a living person introduces constraints that a typical mechanical assembly does not have: the device has to be comfortable over long periods, stay securely attached under heavy dynamic loading, and adapt to a body that is never perfectly symmetric or static.\n\nThe goal was to help a friend perform two specific gym movements that were otherwise inaccessible to him: a pull-up and a bicep curl. Rather than building one general-purpose limb, we focused the design around these movements so the attachment could be optimized for the loads and grip geometry each exercise demands.\n\n• Used a Creaform 3D scanner to capture the geometry of the residual limb, giving us an accurate digital reference to design against instead of relying on manual measurements. This was the key to achieving a socket that fit securely without pressure points.\n\n• Modeled the socket, coupling, and gym attachment in CAD, iterating on the fit and load paths across multiple prototype revisions based on direct feedback from our subject.\n\n• Fabricated the structural components out of carbon fiber for a high strength-to-weight ratio, keeping the prosthetic light enough for comfortable extended wear while still handling full bodyweight during pull-ups.\n\n• Integrated a load cell into the assembly to measure the force running through the prosthetic in real time, allowing us to detect when the device was being taken beyond its safe operating load and flag it before failure.\n\nThis project tested my skills in design for the human body, precision fitting, composite manufacturing, and sensor integration.',
+    technologies: ['Carbon Fiber', 'CAD', 'Load Cell', 'Creaform 3D Scanner', 'Manufacturing', 'SolidWorks'],
+    category: 'manufacturing',
+    image: '/projects/prosthetic-arm/IMG_0429.jpeg',
+    duration: '4 months',
+    highlights: [
+      'Successfully enabled our friend to complete a bicep curl using the prosthetic',
+      'Designed a prosthetic that stayed secure and comfortable for our subject under load',
+      'First hands-on experience designing and fabricating with carbon fiber',
+      'Integrated a load cell to detect when the prosthetic was under excessive load'
+    ],
+    images: [
+      '/projects/prosthetic-arm/IMG_0429.jpeg',
+      '/projects/prosthetic-arm/IMG_0430.jpeg',
+      '/projects/prosthetic-arm/IMG_0431.jpeg',
+      '/projects/prosthetic-arm/IMG_0432.jpeg',
+      '/projects/prosthetic-arm/IMG_6474.jpeg',
+      '/projects/prosthetic-arm/IMG_6475.jpeg',
+      '/projects/prosthetic-arm/IMG_6476.jpeg',
+      '/projects/prosthetic-arm/IMG_6477.jpeg',
+      '/projects/prosthetic-arm/IMG_6478.jpeg',
+      '/projects/prosthetic-arm/IMG_6479.jpeg',
+      '/projects/prosthetic-arm/IMG_8687.jpeg'
+    ],
+    videos: [
+      '/projects/prosthetic-arm/IMG_8692.mov'
+    ]
+  },
+  {
+    id: '11',
+    title: 'Roller Bot',
+    description: '',
+    detailedDescription: '',
+    technologies: [],
+    category: 'design',
+    image: '',
+    duration: '',
+    highlights: []
   }
 ];
 
@@ -349,7 +392,7 @@ export const skills: Skill[] = [
     ]
   },
   {
-    category: 'Programming & Automation',
+    category: 'Controls & Automation',
     items: [
       { name: 'Python', logo: '/logos/python.svg', level: 92 },
       { name: 'C++', logo: '/logos/cpp.svg', level: 85 },
@@ -372,7 +415,7 @@ export const skills: Skill[] = [
     ]
   },
   {
-    category: 'Engineering Fundamentals',
+    category: 'Biotech & Medtech',
     items: [
       { name: 'Thermodynamics', logo: '/logos/thermodynamics.svg', level: 93 },
       { name: 'Fluid Mechanics', logo: '/logos/fluid-mechanics.svg', level: 91 },
@@ -380,6 +423,16 @@ export const skills: Skill[] = [
       { name: 'Materials Science', logo: '/logos/materials.svg', level: 87 },
       { name: 'Control Systems', logo: '/logos/control-systems.svg', level: 90 },
       { name: 'Vibrations', logo: '/logos/vibrations.svg', level: 85 }
+    ]
+  },
+  {
+    category: 'Robotics',
+    items: [
+      { name: 'Arduino', logo: '/logos/arduino.svg', level: 89 },
+      { name: 'PID Control', logo: '/logos/control-systems.svg', level: 85 },
+      { name: 'C++', logo: '/logos/cpp.svg', level: 85 },
+      { name: 'MATLAB', logo: '/logos/matlab.svg', level: 90 },
+      { name: 'SolidWorks', logo: '/logos/solidworks.svg', level: 95 }
     ]
   }
 ];
